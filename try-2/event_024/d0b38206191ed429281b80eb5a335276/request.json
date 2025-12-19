@@ -1,0 +1,65 @@
+{
+    "request": {
+        "headers": {
+            "accept": "image/tiff",
+            "content-type": "application/json"
+        },
+        "payload": {
+            "evalscript": "\n//VERSION=3\nfunction setup() {\n  return {\n    input: [\"B02\", \"B03\", \"B04\", \"B08\", \"B12\", \"SCL\"],\n    output: { bands: 6, sampleType: \"FLOAT32\" }\n  };\n}\n\nfunction evaluatePixel(sample) {\n  return [\n    sample.B02,   // Blue\n    sample.B03,   // Green\n    sample.B04,   // Red\n    sample.B08,   // NIR\n    sample.B12,   // SWIR2\n    sample.SCL    // Scene Classification Mask\n  ];\n}\n",
+            "input": {
+                "bounds": {
+                    "bbox": [
+                        122.655,
+                        -17.340989999999998,
+                        122.73169,
+                        -17.27015
+                    ],
+                    "properties": {
+                        "crs": "http://www.opengis.net/def/crs/EPSG/0/4326"
+                    }
+                },
+                "data": [
+                    {
+                        "dataFilter": {
+                            "timeRange": {
+                                "from": "2025-11-03T00:00:00Z",
+                                "to": "2025-11-03T23:59:59Z"
+                            }
+                        },
+                        "type": "sentinel-2-l2a"
+                    }
+                ]
+            },
+            "output": {
+                "height": 392,
+                "responses": [
+                    {
+                        "format": {
+                            "type": "image/tiff"
+                        },
+                        "identifier": "default"
+                    }
+                ],
+                "width": 407
+            }
+        },
+        "timestamp": "2025-12-19T22:45:02.238245",
+        "url": "https://services.sentinel-hub.com/api/v1/process"
+    },
+    "response": {
+        "elapsed": 0.886185,
+        "headers": {
+            "Connection": "keep-alive",
+            "Content-Type": "image/tiff",
+            "Date": "Fri, 19 Dec 2025 19:45:01 GMT",
+            "Transfer-Encoding": "chunked",
+            "access-control-allow-credentials": "true",
+            "access-control-allow-headers": "origin,content-type,accept,accept-crs,authorization,cache-control",
+            "access-control-allow-methods": "GET, POST, PUT, DELETE, OPTIONS, HEAD, PATCH",
+            "access-control-allow-origin": "*",
+            "access-control-max-age": "3600",
+            "x-processingunits-spent": "2.4344482421875"
+        },
+        "status_code": 200
+    }
+}
