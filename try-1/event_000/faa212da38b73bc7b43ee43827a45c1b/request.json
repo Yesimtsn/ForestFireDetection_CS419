@@ -43,15 +43,15 @@
                 "width": 405
             }
         },
-        "timestamp": "2025-12-19T22:43:47.843924",
+        "timestamp": "2025-12-22T14:56:36.581199",
         "url": "https://services.sentinel-hub.com/api/v1/process"
     },
     "response": {
-        "elapsed": 1.126422,
+        "elapsed": 0.796376,
         "headers": {
             "Connection": "keep-alive",
             "Content-Type": "image/tiff",
-            "Date": "Fri, 19 Dec 2025 19:43:46 GMT",
+            "Date": "Mon, 22 Dec 2025 11:56:35 GMT",
             "Transfer-Encoding": "chunked",
             "access-control-allow-credentials": "true",
             "access-control-allow-headers": "origin,content-type,accept,accept-crs,authorization,cache-control",
