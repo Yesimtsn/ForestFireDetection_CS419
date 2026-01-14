@@ -68,9 +68,3 @@ $$NBR = \frac{NIR - SWIR}{NIR + SWIR}$$
 * **İlke Demirkır:** Dataset construction and preprocessing pipeline development.
 * **Doruk Yeşil:** Feature engineering, implementation of segmentation methods, and experimental evaluation.
 
----
-
-## References
-
-* [1] Guiomar et al., "Forest burned area detection based on Sentinel-2 and Rao's Q index," 2024.
-* [2] Sismanis et al., "An unsupervised burned area mapping approach using Sentinel-2 images," 2023.
